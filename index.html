@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Fazenda VR - CRUD de Ovelhas</title>
+
+<script src="https://aframe.io/releases/1.4.0/aframe.min.js"></script>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<h2>🐑 Fazenda Virtual</h2>
+
+<a-scene>
+
+<a-plane 
+rotation="-90 0 0"
+width="40"
+height="40"
+color="#5dbb63">
+</a-plane>
+
+<a-sky color="#87CEEB"></a-sky>
+
+<a-sphere
+position="10 15 -20"
+radius="2"
+color="yellow"
+emissive="yellow">
+</a-sphere>
+
+<a-entity id="ovelhas"></a-entity>
+
+<a-entity position="-6 0 -6">
+
+<a-cylinder
+height="3"
+radius="0.3"
+color="#8B4513">
+</a-cylinder>
+
+<a-sphere
+position="0 2 0"
+radius="1.5"
+color="green">
+</a-sphere>
+
+</a-entity>
+
+</a-entity>
+
+<a-camera position="0 1.6 5">
+
+<a-cursor 
+fuse="true"
+fuse-timeout="1500"
+raycaster="objects: a-box, a-sphere">
+</a-cursor>
+
+</a-camera>
+
+<a-box 
+position="0 2 -6"
+width="6"
+height="3"
+depth="0.3"
+color="#8B5A2B">
+</a-box>
+
+<a-box
+id="btnCriarOvelha"
+position="-2 2 -5.8"
+width="1.5"
+height="0.6"
+depth="0.2"
+color="green">
+</a-box>
+
+<a-text
+value="PROCRIAR"
+align="center"
+position="-2 2.4 -5.7"
+color="white">
+</a-text>
+
+
+<a-box
+id="btnListar"
+position="0 2 -5.8"
+width="1.5"
+height="0.6"
+depth="0.2"
+color="blue">
+</a-box>
+
+<a-text
+value="LISTAR"
+align="center"
+position="0 2.4 -5.7"
+color="white">
+</a-text>
+
+
+<a-box
+id="btnLimpar"
+position="2 2 -5.8"
+width="1.5"
+height="0.6"
+depth="0.2"
+color="red">
+</a-box>
+
+<a-text
+value="LIMPAR"
+align="center"
+position="2 2.4 -5.7"
+color="white">
+</a-text>
+
+<a-box 
+position="6 2 -3"
+width="4"
+height="3"
+depth="0.3"
+color="#444">
+</a-box>
+
+<a-box
+id="btnTosar"
+position="5 2 -2.8"
+width="1.2"
+height="0.6"
+depth="0.2"
+color="orange">
+</a-box>
+
+<a-text
+value="TOSAR"
+align="center"
+position="5 2.4 -2.7"
+color="white">
+</a-text>
+
+
+<a-box
+id="btnAlimentar"
+position="6.5 2 -2.8"
+width="1.2"
+height="0.6"
+depth="0.2"
+color="green">
+</a-box>
+
+<a-text
+value="ALIMENTAR"
+align="center"
+position="6.5 2.4 -2.7"
+color="white">
+</a-text>
+
+
+<a-box
+id="btnMatar"
+position="6 1.2 -2.8"
+width="1.2"
+height="0.6"
+depth="0.2"
+color="red">
+</a-box>
+
+<a-text
+value="MATAR"
+align="center"
+position="6 1.6 -2.7"
+color="white">
+</a-text>
+
+
+</a-scene>
+
+<script src="script.js"></script>
+
+</body>
+</html>
